@@ -54,6 +54,19 @@ public class Player {
 	public int getManaMax() { return this.manaMax; }
 	public int getMana() { return this.mana; }
 	
+	// TODO set methods
+	public void setName(String name) { this.name = name; }
+	public void setExperience(int experience) { this.experience = experience;}
+	public void setLevel(int level) { this.level = level; }
+	public void setStrength(int strength) { this.strength = strength; }
+	public void setStamina(int stamina) { this.stamina = stamina; }
+	public void setSpeed(int speed) { this.speed = speed; }
+	public void setMagic(int magic) { this.magic = magic; }
+	public void setHealthMax(int healthMax) { this.healthMax = healthMax; }
+	public void setHealth(int health) { this.health = health; }
+	public void setManaMax(int manaMax) { this.manaMax = manaMax; }
+	public void setMana(int mana) { this.mana = mana; }
+	
 	
 	//General Player action methods
 	
@@ -135,8 +148,18 @@ class Sorcerer extends Player {
 
 class Human extends Player {
 	
+	protected String address;
+	protected boolean isEmployed;
+	protected String jobTitle;
+	protected boolean isMarried;
+	protected String gender;
+	protected String religion;
+	protected int age;
+	protected int height;
+	protected int weight;
+	
 	// Human class constructor
-	public Human(String name) {
+	public Human(String name, String gender, int age, int height, int weight) {
 		super(name);
 		this.experience = 0;
 		this.level = 0;
@@ -152,20 +175,59 @@ class Human extends Player {
 		this.health = this.healthMax;
 		this.manaMax = 0;
 		this.mana = this.manaMax;
+		
+			
+		
+		this.gender = gender;
+		this.age = age;
+		this.height = height;
+		this.weight = weight;
+	}
+
+
+	public String getGender() {
+		return gender;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public int getWeight() {
+		return weight;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
+	public void setWeight(int weight) {
+		this.weight = weight;
 	}
 	
 	// methods
-		public void sleep(){
-			System.out.println("You are sleeping.");
-		}
+	
 		
 }
 
 class Paladin extends Human {
-
+	
+	
 	// Paladin class constructor
-	public Paladin(String name) {
-		super(name);
+	public Paladin(String name, String gender, int age, int height, int weight) {
+		super(name, gender, age, height, weight);
 		this.experience = 0;
 		this.level = 0;
 		
@@ -191,72 +253,6 @@ class Paladin extends Human {
 		else
 			System.out.println("You must be at least level 2 to use Heal.");
 	}
-	public void smash() {
-		if (level >= 3) 
-			System.out.println("You smashed your enemies.");
-		else
-			System.out.println("You must be atleast level 3 to use Smash.");
-	}
-
-class Archer extends Human{
 	
-	public Archer(String name){
-		super(name);
-		this.experience = 0;
-		this.level = 0;
-		
-		
-		this.strength = 20;
-		this.stamina = 20;
-		this.speed = 10;
-		this.magic = 0;
-		
-		
-		this.healthMax = 35;
-		this.health = this.healthMax;
-		this.manaMax = 0;
-		this.mana = this.manaMax;
-		
-	}
-	
-	public void rangeAttack(){
-		if(level >= 1){
-			System.out.println("You shot your bow.");
-		}
-		else
-			System.out.println("You must be atleast level 1 to use Range Attack.");
-			
-	}
-	
-class Swordsman extends Human{
-	
-	public Swordsman(String name){
-		super(name);
-		this.experience = 0;
-		this.level = 0;
-		
-		
-		this.strength = 30;
-		this.stamina = 5;
-		this.speed = 10;
-		this.magic = 0;
-		
-		
-		this.healthMax = 50;
-		this.health = this.healthMax;
-		this.manaMax = 0;
-		this.mana = this.manaMax;
-	}
-	public void charge(){
-		if(level >= 3){
-			System.out.println("You used charge. ");
-		}
-			System.out.println("You must atleast level 3 to use charge.");
-	}
-	
-	
-}
-	
-}
 
 }
