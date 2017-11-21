@@ -69,7 +69,9 @@ public class Player {
 	
 	
 	//General Player action methods
-	
+	public void sleep() {
+		System.out.println("You are now asleep.");
+	}
 	
 	
 }
@@ -256,6 +258,11 @@ class Paladin extends Human {
 			System.out.println("You must be at least level 2 to use Heal.");
 	}
 	
+	@Override
+	public void sleep() {
+		System.out.println("You are now asleep.");
+		if(this.health <= this.healthMax) { this.health += 5; }
+	}
 
 
 // TODO fix constructors and reorder
@@ -267,24 +274,25 @@ class Paladin extends Human {
 	 	}
 
 }
-	 class Archer extends Human{
+
+class Archer extends Human {
 	 	
-		 public Archer(String name, String gender, int age, int height, int weight){
-	 		super(name, gender, age, height, weight);
+	public Archer(String name, String gender, int age, int height, int weight){
+		super(name, gender, age, height, weight);
 	 	this.experience = 0;
-	 		this.level = 0;
+	 	this.level = 0;
 	 		
 	 		
-	 		this.strength = 20;
-	 		this.stamina = 20;
-	 		this.speed = 10;
-	 		this.magic = 0;
+	 	this.strength = 20;
+	 	this.stamina = 20;
+	 	this.speed = 10;
+	 	this.magic = 0;
 	 		
 	 		
-	 		this.healthMax = 35;
-	 		this.health = this.healthMax;
-	 		this.manaMax = 0;
-	 		this.mana = this.manaMax;
+	 	this.healthMax = 35;
+	 	this.health = this.healthMax;
+	 	this.manaMax = 0;
+	 	this.mana = this.manaMax;
 	 		
 	 	}
 	 	
@@ -294,27 +302,27 @@ class Paladin extends Human {
 	 		}
 	 		else
 	 			System.out.println("You must be atleast level 1 to use Range Attack.");
-	 			
 	 	}
+	 			
+}
 	 	
-	 class Swordsman extends Human{
+class Swordsman extends Human {
 	 	
-	 	public Swordsman(String name, String gender, int age, int height, int weight){
-	 		super(name, gender, age, height, weight);
-	 		this.experience = 0;
-	 		this.level = 0;
+	public Swordsman(String name, String gender, int age, int height, int weight){
+		super(name, gender, age, height, weight);
+	 	this.experience = 0;
+	 	this.level = 0;
+	 		
+	 	this.strength = 30;
+ 		this.stamina = 5;
+	 	this.speed = 10;
+	 	this.magic = 0;
 	 		
 	 		
-	 		this.strength = 30;
-	 		this.stamina = 5;
-	 		this.speed = 10;
-	 		this.magic = 0;
-	 		
-	 		
-	 		this.healthMax = 50;
-	 		this.health = this.healthMax;
-	 		this.manaMax = 0;
-	 		this.mana = this.manaMax;
+	 	this.healthMax = 50;
+	 	this.health = this.healthMax;
+		this.manaMax = 0;
+	 	this.mana = this.manaMax;
 	 	}
 	 	public void charge(){
 	 		if(level >= 3){
@@ -324,6 +332,5 @@ class Paladin extends Human {
 	 	}
 	  	
 	 	
-	 }
  	
-	 }
+}
