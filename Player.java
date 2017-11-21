@@ -218,7 +218,9 @@ class Human extends Player {
 	}
 	
 	// methods
-	
+	public void sleep(){
+			System.out.println("You are sleeping.");
+		}
 		
 }
 
@@ -255,4 +257,73 @@ class Paladin extends Human {
 	}
 	
 
+
+// TODO fix constructors and reorder
+	public void smash() {
+	 		if (level >= 3) 
+	 			System.out.println("You smashed your enemies.");
+	 		else
+	 			System.out.println("You must be atleast level 3 to use Smash.");
+	 	}
+
 }
+	 class Archer extends Human{
+	 	
+		 public Archer(String name, String gender, int age, int height, int weight){
+	 		super(name, gender, age, height, weight);
+	 	this.experience = 0;
+	 		this.level = 0;
+	 		
+	 		
+	 		this.strength = 20;
+	 		this.stamina = 20;
+	 		this.speed = 10;
+	 		this.magic = 0;
+	 		
+	 		
+	 		this.healthMax = 35;
+	 		this.health = this.healthMax;
+	 		this.manaMax = 0;
+	 		this.mana = this.manaMax;
+	 		
+	 	}
+	 	
+	 	public void rangeAttack(){
+	 		if(level >= 1){
+	 			System.out.println("You shot your bow.");
+	 		}
+	 		else
+	 			System.out.println("You must be atleast level 1 to use Range Attack.");
+	 			
+	 	}
+	 	
+	 class Swordsman extends Human{
+	 	
+	 	public Swordsman(String name, String gender, int age, int height, int weight){
+	 		super(name, gender, age, height, weight);
+	 		this.experience = 0;
+	 		this.level = 0;
+	 		
+	 		
+	 		this.strength = 30;
+	 		this.stamina = 5;
+	 		this.speed = 10;
+	 		this.magic = 0;
+	 		
+	 		
+	 		this.healthMax = 50;
+	 		this.health = this.healthMax;
+	 		this.manaMax = 0;
+	 		this.mana = this.manaMax;
+	 	}
+	 	public void charge(){
+	 		if(level >= 3){
+	 			System.out.println("You used charge. ");
+	 		}
+	 			System.out.println("You must atleast level 3 to use charge.");
+	 	}
+	  	
+	 	
+	 }
+ 	
+	 }
