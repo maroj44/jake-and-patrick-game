@@ -223,6 +223,12 @@ class Human extends Player {
 	public void sleep(){
 			System.out.println("You are sleeping.");
 		}
+	
+	public void eat() {
+		System.out.println("You ate some food.");
+		this.weight += 1;
+		this.health = this.healthMax;
+	}
 		
 }
 
