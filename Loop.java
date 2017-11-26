@@ -17,6 +17,7 @@ public class Loop {
 		System.out.println("Enter Weight (in POUNDS): ");
 		int weight = input.nextInt();
 		
+		/*
 		Swordsman user = new Swordsman(name, gender, age, height, weight);
 		
 		System.out.println("You have created a Swordsman named " + user.getName());
@@ -48,7 +49,7 @@ public class Loop {
 		tyler.setLevel(3);
 		tyler.heal();
 		tyler.smash();
-		
+		*/
 		
 	}
 

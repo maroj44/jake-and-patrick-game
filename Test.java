@@ -3,7 +3,7 @@ import java.awt.*;
 import java.util.Scanner;
 
 
-public class Map extends Applet {
+public class Test extends Applet {
 	/**
 	 * 
 	 */
@@ -37,7 +37,11 @@ public class Map extends Applet {
 		int age;
 		int weight;
 		
-		System.out.println("CHARACTER CREATOR v1.0");
+		// objects
+		Player billie = new Player("Billie", 10, 800, 100, 100);
+		g.drawImage(player, 10, 800, 100, 100, this);
+		
+/*		System.out.println("CHARACTER CREATOR v1.0");
 		// player creator
 		
 		System.out.println("Creating... PLAYER");
@@ -53,9 +57,9 @@ public class Map extends Applet {
 		height = input.nextInt();
 		Player user = new Player(name, xPos, yPos, width, height);
 		user.setLevel(4);
-		 g.drawImage(player, user.xPos, user.yPos, user.width, user.height, this);
+		g.drawImage(player, user.xPos, user.yPos, user.width, user.height, this);
 		
-		// human creator
+//		human creator
 		System.out.println("Creating... HUMAN");
 		System.out.println("Enter name: ");
 		name = input.nextLine();
@@ -75,7 +79,7 @@ public class Map extends Applet {
 		weight = input.nextInt();
 		Human user1 = new Human(name, xPos, yPos, width, height, gender, age, weight);
 		user1.setLevel(4);
-		 g.drawImage(human, xPos, yPos, width, height, this);
+		g.drawImage(human, xPos, yPos, width, height, this);
 		
 		// sorcerer creator
 		System.out.println("Creating... SORCERER");
@@ -91,8 +95,8 @@ public class Map extends Applet {
 		height = input.nextInt();
 		Sorcerer user2 = new Sorcerer(name, xPos, yPos, width, height);
 		user2.setLevel(4);
-		 g.drawImage(sorcerer, xPos, yPos, width, height, this);
-		 g.finalize();
+		g.drawImage(sorcerer, xPos, yPos, width, height, this);
+		g.finalize();
 		
 		// barbarian creator
 		System.out.println("Creating... BARBARIAN");
@@ -156,22 +160,19 @@ public class Map extends Applet {
 		user5.setLevel(4);
 		g.drawImage(archer, xPos, yPos, width, height, this);
 		g.finalize();
-		
-		/* super.setSize(1200, 800);
-		int xPos = 0;
-		int yPos = 0;
-		int width = 300;
-		int height = 300;
+*/		
 		
 		
+/*		
 		Graphics2D g = (Graphics2D) p;
 		toolkit = Toolkit.getDefaultToolkit();
 	    Image img1 = toolkit.getImage("assets/turkey.png");
 	    g.drawImage(img1, xPos, yPos, width, height, this);
 	    g.finalize();
-	    */
+	    
+*/		
+//		g.drawImage(player, user.xPos, user.yPos, user.width, user.height, this);
 		
-		g.drawImage(player, user.xPos, user.yPos, user.width, user.height, this);
 	}
 
 }
